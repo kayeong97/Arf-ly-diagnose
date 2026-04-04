@@ -1,9 +1,11 @@
-# Alfy-diagnose
+# Arf-ly-diagnose
 
 강아지 피부질환 진단을 위한 Python 기반 API 서버입니다.  
 사용자가 반려견의 피부 이미지를 업로드하면, AI 모델을 통해 피부 상태를 분석하고 진단 결과를 반환합니다.
 
 이 프로젝트는 AI-Hub에서 제공하는 반려동물 피부질환 데이터셋과 모델을 활용하여 개발되었습니다.
+
+[Arf-ly 주소] https://github.com/Arf-ly
 
 ---
 
