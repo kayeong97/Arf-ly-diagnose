@@ -1,0 +1,18 @@
+services:
+  petcare-api:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: alfy_api
+    ports:
+      - "10023:8080"
+    volumes:
+      - ..:/workspace
+    working_dir: /workspace/api
+    environment:
+      CUDA_VISIBLE_DEVICES: "-1"
+      TF_CPP_MIN_LOG_LEVEL: "2"
+      TF_NUM_INTRAOP_THREADS: "2"
+      TF_NUM_INTEROP_THREADS: "2"
+      API_LOG_FILE: "/workspace/api/api.log"
+    command: python -m uvicorn alfy_api:app --host 0.0.0.0 --port 8080
